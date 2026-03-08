@@ -3,310 +3,272 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Finitra Group — Professional Business Solutions</title>
+  <title>Finitra — Professional Business Solutions</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --blue:       #1a3a5c;
-      --blue-hover: #224a78;
-      --blue-dark:  #112540;
-      --blue-light: #eef3f9;
-      --blue-mid:   #2e5f96;
-      --gold:       #b8933a;
-      --gold-light: #d4aa58;
-      --gold-pale:  #fdf6e8;
-      --white:      #ffffff;
-      --off-white:  #f8f9fb;
-      --text:       #111827;
-      --text-mid:   #374b64;
-      --text-muted: #6b7a8d;
-      --border:     #d8e2ee;
-      --radius:     8px;
+      --blue:        #0052CC;
+      --blue-hover:  #003D99;
+      --blue-dark:   #002866;
+      --blue-light:  #E6F0FF;
+      --blue-pale:   #F0F6FF;
+      --gold:        #D4AF37;
+      --gold-light:  #E8C97A;
+      --white:       #ffffff;
+      --off-white:   #FAFBFC;
+      --text:        #1A1A1A;
+      --text-mid:    #4A4A4A;
+      --text-muted:  #737373;
+      --border:      #E5E7EB;
+      --radius:      8px;
     }
 
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Inter', sans-serif;
       color: var(--text); background: var(--white);
       line-height: 1.6; -webkit-font-smoothing: antialiased;
     }
 
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
 
     .section-label {
-      font-size: 11px; font-weight: 700; letter-spacing: .14em;
-      text-transform: uppercase; color: var(--gold);
-      display: block; margin-bottom: 14px;
+      font-size: 11px; font-weight: 700; letter-spacing: .15em;
+      text-transform: uppercase; color: var(--blue);
+      display: block; margin-bottom: 12px;
     }
 
     /* Buttons */
     .btn {
-      display: inline-block; font-family: 'Raleway', sans-serif;
-      font-size: 14px; font-weight: 600; padding: 13px 28px;
-      border-radius: var(--radius); text-decoration: none;
+      display: inline-block; font-family: 'Inter', sans-serif;
+      font-size: 13px; font-weight: 600; padding: 14px 32px;
+      border-radius: 6px; text-decoration: none;
       cursor: pointer; border: none;
-      transition: background .2s, transform .15s, box-shadow .2s;
-      letter-spacing: .02em;
+      transition: all .2s ease; letter-spacing: .05em;
+      text-transform: uppercase;
     }
     .btn-primary { background: var(--blue); color: #fff; }
-    .btn-primary:hover { background: var(--blue-hover); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(26,58,92,.22); }
-    .btn-outline-white { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.4); }
-    .btn-outline-white:hover { background: rgba(255,255,255,.1); }
+    .btn-primary:hover { background: var(--blue-hover); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,82,204,.25); }
+    .btn-outline { background: transparent; color: var(--blue); border: 2px solid var(--blue); }
+    .btn-outline:hover { background: var(--blue); color: #fff; }
     .btn-white { background: #fff; color: var(--blue); }
-    .btn-white:hover { background: #e8eef5; }
-    .btn-gold { background: var(--gold); color: #fff; }
-    .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-white:hover { background: var(--blue-pale); }
 
     /* Nav */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(255,255,255,.96); backdrop-filter: blur(10px);
+      background: rgba(255,255,255,.98); backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
     }
     .nav-inner {
-      max-width: 1100px; margin: 0 auto; padding: 0 28px;
-      height: 64px; display: flex; align-items: center; justify-content: space-between;
+      max-width: 1200px; margin: 0 auto; padding: 0 32px;
+      height: 72px; display: flex; align-items: center; justify-content: space-between;
     }
-    .nav-logo { display: flex; align-items: center; text-decoration: none; }
-    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; gap: 10px; }
+    .nav-logo svg { height: 32px; width: auto; }
+    .nav-links { display: flex; align-items: center; gap: 40px; list-style: none; }
     .nav-links a {
-      font-size: 13px; font-weight: 600; letter-spacing: .03em;
+      font-size: 14px; font-weight: 500;
       color: var(--text-mid); text-decoration: none; transition: color .15s;
     }
     .nav-links a:hover { color: var(--blue); }
-    .nav-links .nav-cta .btn { padding: 9px 22px; font-size: 13px; }
+    .nav-links .nav-cta .btn { padding: 10px 24px; font-size: 12px; color: #fff !important; }
     .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
 
     /* Hero */
     .hero {
-      padding-top: 64px; min-height: 88vh;
+      padding-top: 72px; min-height: 90vh;
       display: flex; align-items: center;
-      background: var(--blue); position: relative; overflow: hidden;
-    }
-    .hero::before {
-      content: ''; position: absolute; bottom: 0; right: 0;
-      width: 50%; height: 100%;
-      background: linear-gradient(135deg, transparent 40%, rgba(184,147,58,.08) 100%);
-      pointer-events: none;
+      background: linear-gradient(135deg, #F0F6FF 0%, #FFF9E6 50%, #E6F0FF 100%);
+      position: relative; overflow: hidden;
     }
     .hero-inner {
       position: relative; z-index: 1;
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 64px; align-items: center;
-      padding: 80px 28px; max-width: 1100px; margin: 0 auto; width: 100%;
+      text-align: center; padding: 100px 32px 80px;
+      max-width: 900px; margin: 0 auto; width: 100%;
     }
-    .hero-left .section-label { color: rgba(212,170,88,.85); }
     .hero h1 {
-      font-family: 'Source Serif 4', serif;
-      font-size: clamp(34px, 4.5vw, 52px); font-weight: 600;
-      color: #fff; line-height: 1.2; letter-spacing: -.01em; margin-bottom: 22px;
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(38px, 5vw, 64px); font-weight: 700;
+      color: var(--text); line-height: 1.15; margin-bottom: 16px;
     }
-    .hero h1 span { color: #d4aa58; }
-    .hero-desc { font-size: 16px; color: rgba(255,255,255,.7); line-height: 1.75; margin-bottom: 36px; max-width: 460px; }
-    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-    .hero-right {
-      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12);
-      border-radius: 12px; padding: 36px 32px;
+    .hero h1 .highlight {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-weight: 400;
+      color: var(--text); display: block;
     }
-    .hero-right h3 {
-      font-family: 'Source Serif 4', serif;
-      font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 24px;
+    .hero-desc { font-size: 18px; color: var(--text-mid); line-height: 1.7; margin-bottom: 36px; max-width: 640px; margin-left: auto; margin-right: auto; }
+    .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 60px; }
+
+    .hero-services {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px; margin-top: 60px;
     }
-    .hero-service-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
-    .hero-service-item {
-      display: flex; align-items: flex-start; gap: 14px;
-      padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,.08);
+    .hero-service-card {
+      background: rgba(255,255,255,.7); backdrop-filter: blur(8px);
+      border: 1px solid var(--border); border-radius: 12px;
+      padding: 28px 24px; text-align: left;
+      transition: all .25s ease;
     }
-    .hero-service-item:last-child { border-bottom: none; padding-bottom: 0; }
-    .hsi-icon {
-      width: 36px; height: 36px; flex-shrink: 0;
-      background: rgba(255,255,255,.1); border-radius: 8px;
-      display: flex; align-items: center; justify-content: center; font-size: 17px;
-    }
-    .hsi-text strong { display: block; font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 2px; }
-    .hsi-text span { font-size: 12px; color: rgba(255,255,255,.52); }
+    .hero-service-card:hover { background: rgba(255,255,255,.95); box-shadow: 0 8px 24px rgba(0,82,204,.08); transform: translateY(-2px); }
+    .hero-service-card .icon { font-size: 32px; margin-bottom: 12px; display: block; }
+    .hero-service-card h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .hero-service-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
 
     /* About */
     .about { padding: 96px 0; background: var(--white); }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-    .about h2 {
-      font-family: 'Source Serif 4', serif;
-      font-size: clamp(26px, 3vw, 36px); font-weight: 600;
-      color: var(--text); line-height: 1.25; margin-bottom: 20px;
-    }
-    .about p { font-size: 15px; color: var(--text-mid); line-height: 1.8; margin-bottom: 16px; }
+    .about h2 { font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; color: var(--text); line-height: 1.2; margin-bottom: 20px; }
+    .about p { font-size: 16px; color: var(--text-mid); line-height: 1.8; margin-bottom: 16px; }
     .about p:last-of-type { margin-bottom: 0; }
-    .value-list { list-style: none; margin-top: 32px; display: flex; flex-direction: column; gap: 12px; }
+    .value-list { list-style: none; margin-top: 32px; display: flex; flex-direction: column; gap: 14px; }
     .value-item {
-      display: flex; align-items: flex-start; gap: 12px;
-      padding: 16px 18px; border: 1px solid var(--border);
-      border-radius: var(--radius); transition: border-color .2s, box-shadow .2s;
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 18px 20px; background: var(--blue-pale);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      transition: border-color .2s, box-shadow .2s;
     }
-    .value-item:hover { border-color: var(--blue-mid); box-shadow: 0 2px 12px rgba(26,58,92,.07); }
-    .vi-dot { width: 8px; height: 8px; margin-top: 6px; flex-shrink: 0; background: var(--gold); border-radius: 50%; }
-    .vi-body strong { display: block; font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
-    .vi-body span { font-size: 13px; color: var(--text-muted); }
+    .value-item:hover { border-color: var(--blue); box-shadow: 0 2px 12px rgba(0,82,204,.08); }
+    .vi-icon { font-size: 22px; flex-shrink: 0; }
+    .vi-body strong { display: block; font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .vi-body span { font-size: 14px; color: var(--text-muted); }
 
     /* Services */
     .services { padding: 96px 0; background: var(--off-white); border-top: 1px solid var(--border); }
-    .services-header { margin-bottom: 48px; }
-    .services-header h2 {
-      font-family: 'Source Serif 4', serif;
-      font-size: clamp(26px, 3vw, 36px); font-weight: 600; color: var(--text); margin-bottom: 12px;
-    }
-    .services-header p { font-size: 15px; color: var(--text-muted); max-width: 520px; }
-
-    /* 2x2 grid for 4 services */
-    .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .services-header { text-align: center; margin-bottom: 56px; }
+    .services-header h2 { font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; color: var(--text); margin-bottom: 14px; }
+    .services-header p { font-size: 17px; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+    .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
 
     .service-card {
       background: var(--white); border: 1px solid var(--border);
-      border-radius: 10px; padding: 36px 30px;
+      border-radius: 12px; padding: 40px 36px;
       display: flex; flex-direction: column;
-      transition: box-shadow .2s, border-color .2s, transform .2s;
+      transition: all .25s ease;
     }
-    .service-card:hover { border-color: var(--blue-mid); box-shadow: 0 8px 28px rgba(26,58,92,.1); transform: translateY(-3px); }
-
-    /* AI card gets a subtle gold-tinted treatment to stand out */
-    .service-card.ai-card { border-color: #e8d4a0; background: linear-gradient(160deg, #fffdf5 0%, var(--white) 60%); }
-    .service-card.ai-card:hover { border-color: var(--gold); box-shadow: 0 8px 28px rgba(184,147,58,.15); }
-    .service-card.ai-card .sc-icon { background: var(--gold-pale); }
-
+    .service-card:hover { border-color: var(--blue); box-shadow: 0 12px 32px rgba(0,82,204,.1); transform: translateY(-4px); }
     .sc-icon {
-      width: 46px; height: 46px; background: var(--blue-light);
-      border-radius: 10px; display: flex; align-items: center;
-      justify-content: center; font-size: 22px; margin-bottom: 20px;
+      width: 52px; height: 52px; background: var(--blue-light);
+      border-radius: 12px; display: flex; align-items: center;
+      justify-content: center; font-size: 26px; margin-bottom: 20px;
     }
-    .service-card h3 {
-      font-family: 'Source Serif 4', serif;
-      font-size: 20px; font-weight: 600; color: var(--text); margin-bottom: 10px;
-    }
-    .service-card > p { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 24px; flex-grow: 1; }
-    .sc-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .service-card h3 { font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 12px; }
+    .service-card > p { font-size: 15px; color: var(--text-mid); line-height: 1.75; margin-bottom: 24px; flex-grow: 1; }
+    .sc-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
     .sc-list li {
-      font-size: 13px; color: var(--text-mid); font-weight: 500;
-      display: flex; align-items: center; gap: 9px;
+      font-size: 14px; color: var(--text-mid); font-weight: 500;
+      display: flex; align-items: center; gap: 10px;
     }
-    .sc-list li::before { content: ''; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+    .sc-list li::before { content: '→'; color: var(--blue); font-weight: 700; }
 
     /* Who We Serve */
     .serve { padding: 96px 0; background: var(--white); border-top: 1px solid var(--border); }
-    .serve-header { margin-bottom: 48px; }
-    .serve-header h2 {
-      font-family: 'Source Serif 4', serif;
-      font-size: clamp(26px, 3vw, 36px); font-weight: 600; color: var(--text); margin-bottom: 12px;
-    }
-    .serve-header p { font-size: 15px; color: var(--text-muted); max-width: 520px; }
-    .serve-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .serve-header { text-align: center; margin-bottom: 56px; }
+    .serve-header h2 { font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; color: var(--text); margin-bottom: 14px; }
+    .serve-header p { font-size: 17px; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+    .serve-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .serve-card {
-      border: 1px solid var(--border); border-radius: 10px; padding: 28px 24px;
-      transition: border-color .2s, box-shadow .2s;
+      background: var(--blue-pale); border: 1px solid var(--border);
+      border-radius: 12px; padding: 32px 28px; text-align: center;
+      transition: all .25s;
     }
-    .serve-card:hover { border-color: var(--blue-mid); box-shadow: 0 4px 16px rgba(26,58,92,.08); }
-    .serve-icon { font-size: 28px; margin-bottom: 14px; display: block; }
-    .serve-card h4 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
-    .serve-card p { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+    .serve-card:hover { border-color: var(--blue); box-shadow: 0 8px 24px rgba(0,82,204,.1); transform: translateY(-3px); }
+    .serve-icon { font-size: 40px; margin-bottom: 16px; display: block; }
+    .serve-card h4 { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+    .serve-card p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
 
     /* CTA Strip */
-    .cta-strip { background: var(--blue); padding: 72px 0; text-align: center; }
-    .cta-strip h2 {
-      font-family: 'Source Serif 4', serif;
-      font-size: clamp(24px, 3vw, 34px); font-weight: 600; color: #fff; margin-bottom: 14px;
-    }
-    .cta-strip p { font-size: 15px; color: rgba(255,255,255,.68); margin-bottom: 32px; max-width: 440px; margin-left: auto; margin-right: auto; }
+    .cta-strip { background: var(--blue); padding: 80px 0; text-align: center; }
+    .cta-strip h2 { font-size: clamp(26px, 3.5vw, 40px); font-weight: 700; color: #fff; margin-bottom: 16px; }
+    .cta-strip p { font-size: 17px; color: rgba(255,255,255,.85); margin-bottom: 32px; max-width: 540px; margin-left: auto; margin-right: auto; }
 
     /* Contact */
     .contact { padding: 96px 0; background: var(--off-white); border-top: 1px solid var(--border); }
-    .contact-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 60px; }
-    .contact-left h2 {
-      font-family: 'Source Serif 4', serif;
-      font-size: clamp(24px, 3vw, 34px); font-weight: 600; color: var(--text); margin-bottom: 14px;
-    }
-    .contact-left p { font-size: 15px; color: var(--text-mid); line-height: 1.75; margin-bottom: 32px; }
-    .contact-meta { display: flex; flex-direction: column; gap: 16px; }
-    .cm-item { display: flex; align-items: center; gap: 12px; }
+    .contact-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 64px; }
+    .contact-left h2 { font-size: clamp(26px, 3.5vw, 38px); font-weight: 700; color: var(--text); margin-bottom: 16px; }
+    .contact-left p { font-size: 16px; color: var(--text-mid); line-height: 1.75; margin-bottom: 32px; }
+    .contact-meta { display: flex; flex-direction: column; gap: 18px; }
+    .cm-item { display: flex; align-items: center; gap: 14px; }
     .cm-icon {
-      width: 38px; height: 38px; flex-shrink: 0; background: var(--blue-light);
-      border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 17px;
+      width: 42px; height: 42px; flex-shrink: 0; background: var(--blue-light);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px;
     }
-    .cm-text strong { display: block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); }
-    .cm-text span { font-size: 14px; color: var(--text); }
+    .cm-text strong { display: block; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); }
+    .cm-text span { font-size: 15px; color: var(--text); }
 
     .form-note {
-      background: var(--gold-pale); border: 1px solid #e8d49a;
-      border-radius: var(--radius); padding: 12px 16px;
-      font-size: 13px; color: #7a5c1a; margin-bottom: 24px; line-height: 1.55;
+      background: #FFF9E6; border: 1px solid #F5E6B3;
+      border-radius: var(--radius); padding: 14px 18px;
+      font-size: 13px; color: #856404; margin-bottom: 24px; line-height: 1.6;
     }
     .form-note strong { font-weight: 700; }
-    .form-note a { color: var(--gold); text-decoration: underline; }
+    .form-note a { color: var(--blue); text-decoration: underline; }
 
-    .contact-form { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 40px 36px; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .form-group { margin-bottom: 18px; }
+    .contact-form { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 44px 40px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .form-group { margin-bottom: 20px; }
     .form-group label {
-      display: block; font-size: 11px; font-weight: 700;
-      letter-spacing: .06em; text-transform: uppercase; color: var(--text-mid); margin-bottom: 6px;
+      display: block; font-size: 13px; font-weight: 600;
+      color: var(--text); margin-bottom: 8px;
     }
     .form-group input,
     .form-group select,
     .form-group textarea {
-      width: 100%; font-family: 'Raleway', sans-serif;
-      font-size: 14px; color: var(--text); background: var(--off-white);
-      border: 1.5px solid var(--border); border-radius: var(--radius); padding: 11px 14px;
-      outline: none; transition: border-color .18s, box-shadow .18s; appearance: none;
+      width: 100%; font-family: 'Inter', sans-serif;
+      font-size: 15px; color: var(--text); background: var(--white);
+      border: 1.5px solid var(--border); border-radius: 6px; padding: 12px 16px;
+      outline: none; transition: border-color .2s, box-shadow .2s; appearance: none;
     }
     .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus {
-      border-color: var(--blue-mid); box-shadow: 0 0 0 3px rgba(26,58,92,.1); background: var(--white);
+      border-color: var(--blue); box-shadow: 0 0 0 3px rgba(0,82,204,.1);
     }
-    .form-group textarea { min-height: 96px; resize: vertical; }
-    .form-group input::placeholder, .form-group textarea::placeholder { color: #a8b4c4; }
-    .form-submit .btn { width: 100%; text-align: center; }
-    .form-success { display: none; text-align: center; padding: 32px 20px; }
-    .form-success .check { font-size: 44px; margin-bottom: 14px; }
-    .form-success h4 { font-family: 'Source Serif 4', serif; font-size: 20px; color: var(--text); margin-bottom: 8px; }
-    .form-success p { font-size: 14px; color: var(--text-muted); }
+    .form-group textarea { min-height: 108px; resize: vertical; }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: #A3A3A3; }
+    .form-submit .btn { width: 100%; text-align: center; padding: 16px; }
+    .form-success { display: none; text-align: center; padding: 40px 24px; }
+    .form-success .check { font-size: 52px; margin-bottom: 16px; }
+    .form-success h4 { font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+    .form-success p { font-size: 15px; color: var(--text-muted); }
 
     /* Footer */
-    footer { background: #0d1c2e; color: #fff; padding: 56px 0 0; }
+    footer { background: #0A1929; color: #fff; padding: 64px 0 0; }
     .footer-grid {
-      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px;
-      padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.08);
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 56px;
+      padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.1);
     }
-    .footer-brand p { font-size: 13px; color: rgba(255,255,255,.42); line-height: 1.7; margin-top: 14px; max-width: 280px; }
+    .footer-brand p { font-size: 14px; color: rgba(255,255,255,.6); line-height: 1.7; margin-top: 16px; max-width: 320px; }
     .footer-col h5 {
-      font-size: 11px; font-weight: 700; letter-spacing: .1em;
-      text-transform: uppercase; color: rgba(255,255,255,.32); margin-bottom: 14px;
+      font-size: 12px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 16px;
     }
-    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-    .footer-links a { font-size: 13px; color: rgba(255,255,255,.58); text-decoration: none; transition: color .15s; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 14px; color: rgba(255,255,255,.7); text-decoration: none; transition: color .15s; }
     .footer-links a:hover { color: #fff; }
     .footer-bottom {
       display: flex; justify-content: space-between; align-items: center;
-      padding: 22px 0; gap: 16px; flex-wrap: wrap;
+      padding: 24px 0; gap: 20px; flex-wrap: wrap;
     }
-    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,.3); }
-    .footer-bottom-links { display: flex; gap: 20px; }
-    .footer-bottom-links a { font-size: 12px; color: rgba(255,255,255,.3); text-decoration: none; transition: color .15s; }
-    .footer-bottom-links a:hover { color: rgba(255,255,255,.65); }
+    .footer-bottom p { font-size: 13px; color: rgba(255,255,255,.4); }
+    .footer-bottom-links { display: flex; gap: 24px; }
+    .footer-bottom-links a { font-size: 13px; color: rgba(255,255,255,.4); text-decoration: none; transition: color .15s; }
+    .footer-bottom-links a:hover { color: rgba(255,255,255,.7); }
 
     /* Reveal */
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .55s ease, transform .55s ease; }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
     .reveal.in { opacity: 1; transform: none; }
 
     /* Responsive */
-    @media (max-width: 960px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-      .hero-right { display: none; }
-      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    @media (max-width: 1024px) {
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
       .services-grid { grid-template-columns: 1fr; }
       .serve-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 48px; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 640px) {
@@ -314,9 +276,8 @@
       .mobile-toggle { display: flex; }
       .form-row { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
-      .hero-actions { flex-direction: column; }
+      .hero-services { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; align-items: flex-start; }
-      .serve-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -325,18 +286,19 @@
 <!-- Nav -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-logo" aria-label="Finitra Group">
+    <a href="#" class="nav-logo" aria-label="Finitra">
+      <!-- Actual Finitra logo: Two chevron arrows + wordmark -->
       <img src="https://finitragroup.com/images/logo.svg" id="top_logo" style="width: 150px; height: 150px"></img>
     </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#serve">Who We Serve</a></li>
-      <li class="nav-cta"><a href="#contact" class="btn btn-primary">Contact Us</a></li>
+      <li class="nav-cta"><a href="#contact" class="btn btn-primary">Book Free Consultation</a></li>
     </ul>
     <button class="mobile-toggle" aria-label="Open menu">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-        <path d="M3 6h18M3 12h18M3 18h18" stroke="#1a3a5c" stroke-width="2" stroke-linecap="round"/>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke="#0052CC" stroke-width="2" stroke-linecap="round"/>
       </svg>
     </button>
   </div>
@@ -345,46 +307,39 @@
 <!-- Hero -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-left">
-      <span class="section-label">Canadian Business Solutions</span>
-      <h1>Professional Services<br/>for <span>Growing</span><br/>Canadian Businesses</h1>
-      <p class="hero-desc">
-        Finitra Group provides AI solutions, IT consulting, accounting, and business strategy services to small businesses, startups, and individuals across Canada.
-      </p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-gold">Get in Touch</a>
-        <a href="#services" class="btn btn-outline-white">Our Services</a>
-      </div>
+    <h1>
+      Your trusted partner in<br/>
+      <span class="highlight">business &amp; growth</span>
+    </h1>
+    <p class="hero-desc">
+      Finitra provides AI solutions, IT consulting, accounting, and business strategy services to small businesses, startups, and individuals across Canada.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Book Free Consultation</a>
+      <a href="#services" class="btn btn-outline">Explore Our Services</a>
     </div>
 
-    <div class="hero-right">
-      <h3>What We Do</h3>
-      <ul class="hero-service-list">
-        <li class="hero-service-item">
-          <div class="hsi-text">
-            <strong>AI Solutions</strong>
-            <span>Practical AI tools &amp; automation for your business</span>
-          </div>
-        </li>
-        <li class="hero-service-item">
-          <div class="hsi-text">
-            <strong>IT &amp; Technology Consulting</strong>
-            <span>Cloud, infrastructure &amp; digital solutions</span>
-          </div>
-        </li>
-        <li class="hero-service-item">
-          <div class="hsi-text">
-            <strong>Accounting &amp; Tax Services</strong>
-            <span>Bookkeeping, CRA compliance &amp; tax planning</span>
-          </div>
-        </li>
-        <li class="hero-service-item">
-          <div class="hsi-text">
-            <strong>Business Consulting &amp; Strategy</strong>
-            <span>Planning, growth advisory, year-end financial preparation</span>
-          </div>
-        </li>
-      </ul>
+    <div class="hero-services">
+      <div class="hero-service-card">
+        <span class="icon">🤖</span>
+        <h3>AI Solutions</h3>
+        <p>Advanced AI-powered business automation</p>
+      </div>
+      <div class="hero-service-card">
+        <span class="icon">💻</span>
+        <h3>IT & Design</h3>
+        <p>Web development, mobile apps & design services</p>
+      </div>
+      <div class="hero-service-card">
+        <span class="icon">📊</span>
+        <h3>Finance & Legal</h3>
+        <p>Business registration, compliance & legal services</p>
+      </div>
+      <div class="hero-service-card">
+        <span class="icon">🧭</span>
+        <h3>Business Consulting</h3>
+        <p>Strategic investment planning & wealth building</p>
+      </div>
     </div>
   </div>
 </section>
@@ -396,30 +351,30 @@
       <div class="reveal">
         <span class="section-label">About Us</span>
         <h2>A Canadian firm built to support Canadian businesses</h2>
-        <p>Finitra Group is a professional services firm offering AI, IT, accounting, and business consulting to small businesses, startups, and individuals across Canada.</p>
+        <p>Finitra is a professional services firm offering AI, IT, accounting, and business consulting to small businesses, startups, and individuals across Canada.</p>
         <p>We started Finitra because we saw too many small businesses and individuals struggling to get consistent support across technology, finances, and strategy. Our goal is simple: be the one team that covers all of it.</p>
       </div>
       <div class="reveal">
         <ul class="value-list">
           <li class="value-item">
-            <div class="vi-dot"></div>
+            <span class="vi-icon">✓</span>
             <div class="vi-body">
               <strong>Practical over theoretical</strong>
               <span>We focus on solutions that work in the real world — not just recommendations that look good on paper.</span>
             </div>
           </li>
           <li class="value-item">
-            <div class="vi-dot"></div>
+            <span class="vi-icon">✓</span>
             <div class="vi-body">
               <strong>One team, multiple disciplines</strong>
               <span>AI, IT, accounting, and strategy under one roof means fewer gaps and better-informed advice across every area.</span>
             </div>
           </li>
           <li class="value-item">
-            <div class="vi-dot"></div>
+            <span class="vi-icon">✓</span>
             <div class="vi-body">
               <strong>Built for Canada</strong>
-              <span>We understand CRA rules, provincial regulations, and the Canadian funding landscape</span>
+              <span>We understand CRA rules, provincial regulations, and the Canadian funding landscape — so you don't have to become an expert.</span>
             </div>
           </li>
         </ul>
@@ -438,53 +393,58 @@
     </div>
 
     <div class="services-grid">
-
-      <!-- AI Solutions — featured first, subtle gold tint -->
-      <div class="service-card ai-card reveal">
+      <div class="service-card reveal">
+        <div class="sc-icon">🤖</div>
         <h3>AI Solutions</h3>
         <p>We help Canadian businesses move from curiosity about AI to actually using it — identifying where it can save time, reduce costs, and improve decisions, then putting those tools in place.</p>
         <ul class="sc-list">
-          <li>AI readiness assessment &amp; roadmap</li>
+          <li>AI readiness assessment & roadmap</li>
           <li>Workflow automation (repetitive task elimination)</li>
-          <li>AI tool selection &amp; implementation (Copilot, ChatGPT, custom tools)</li>
-          <li>Document processing &amp; data extraction automation</li>
-          <li>AI-assisted reporting &amp; business intelligence</li>
+          <li>AI tool selection & implementation</li>
+          <li>Document processing & data extraction automation</li>
+          <li>AI-assisted reporting & business intelligence</li>
           <li>Staff training on practical AI use</li>
         </ul>
       </div>
 
       <div class="service-card reveal">
-        <h3>IT &amp; Technology Consulting</h3>
+        <div class="sc-icon">💻</div>
+        <h3>IT & Technology Consulting</h3>
         <p>We help businesses and individuals adopt and manage the right technology — from moving to the cloud to securing systems and streamlining daily operations.</p>
         <ul class="sc-list">
-          <li>Cloud setup &amp; migration (Azure, AWS)</li>
-          <li>IT infrastructure planning &amp; support</li>
-          <li>Software selection &amp; implementation</li>
+          <li>Cloud setup & migration (Azure, AWS)</li>
+          <li>IT infrastructure planning & support</li>
+          <li>Cybersecurity basics & best practices</li>
+          <li>Software selection & implementation</li>
           <li>Digital process automation</li>
         </ul>
       </div>
 
       <div class="service-card reveal">
-        <h3>Accounting &amp; Tax Services</h3>
+        <div class="sc-icon">📊</div>
+        <h3>Accounting & Tax Services</h3>
         <p>Accurate books and proactive tax planning keep your finances on solid footing — whether you're running a business or managing your personal taxes.</p>
         <ul class="sc-list">
-          <li>Bookkeeping &amp; monthly reporting</li>
-          <li>Corporate tax returns (T2) &amp; personal (T1)</li>
-          <li>HST/GST registration &amp; filing</li>
-          <li>Payroll &amp; CRA remittances</li>
-          <li>Preparation of Year-end financial statements</li>
+          <li>Bookkeeping & monthly reporting</li>
+          <li>Corporate tax returns (T2) & personal (T1)</li>
+          <li>HST/GST registration & filing</li>
+          <li>Payroll & CRA remittances</li>
+          <li>Year-end financial statements</li>
         </ul>
       </div>
 
       <div class="service-card reveal">
-        <h3>Business Consulting &amp; Strategy</h3>
+        <div class="sc-icon">🧭</div>
+        <h3>Business Consulting & Strategy</h3>
         <p>From writing a business plan to figuring out your next stage of growth, we work alongside you to clarify direction and put a practical plan in place.</p>
         <ul class="sc-list">
           <li>Business plan development</li>
-          <li>Market research &amp; competitive analysis</li>
+          <li>Market research & competitive analysis</li>
+          <li>Operational process improvement</li>
+          <li>Government grant identification & applications</li>
+          <li>Startup incorporation guidance</li>
         </ul>
       </div>
-
     </div>
   </div>
 </section>
@@ -499,14 +459,17 @@
     </div>
     <div class="serve-grid">
       <div class="serve-card reveal">
-        <h4>Small &amp; Medium Businesses</h4>
+        <span class="serve-icon">🏪</span>
+        <h4>Small & Medium Businesses</h4>
         <p>Canadian SMBs that need reliable accounting, ongoing IT support, or strategic advice as they scale — without the cost of a full internal team.</p>
       </div>
       <div class="serve-card reveal">
-        <h4>Startups &amp; Entrepreneurs</h4>
+        <span class="serve-icon">🚀</span>
+        <h4>Startups & Entrepreneurs</h4>
         <p>Early-stage founders who need help getting set up properly — from incorporation and bookkeeping to technology decisions and funding applications.</p>
       </div>
       <div class="serve-card reveal">
+        <span class="serve-icon">👤</span>
         <h4>Individuals</h4>
         <p>Canadians who need personal tax filing (T1), financial planning guidance, or help navigating a specific situation like self-employment or a major life change.</p>
       </div>
@@ -519,7 +482,7 @@
   <div class="container">
     <h2>Ready to talk?</h2>
     <p>Tell us where you're at and what you're trying to solve. First conversation is on us.</p>
-    <a href="#contact" class="btn btn-gold">Book a Free Consultation</a>
+    <a href="#contact" class="btn btn-white">Book Free Consultation</a>
   </div>
 </section>
 
@@ -537,7 +500,7 @@
             <div class="cm-icon">📧</div>
             <div class="cm-text">
               <strong>Email</strong>
-              <span>info@finitragroup.ca</span>
+              <span>info@finitragroup.com</span>
             </div>
           </div>
           <div class="cm-item">
@@ -558,16 +521,6 @@
       </div>
 
       <div class="contact-form reveal">
-        <!--
-          FORM SETUP (Formspree)
-          ─────────────────────────────────────────────────────────
-          1. Sign up at https://formspree.io (free — 50 submissions/month)
-          2. Create a new form → copy your endpoint URL
-          3. Replace "YOUR_FORM_ID" in the action attribute below
-          4. Delete the .form-note banner once live
-          Submissions are emailed to you + stored in Formspree dashboard.
-          ─────────────────────────────────────────────────────────
-        -->
         <div class="form-note">
           <strong>Setup required:</strong> Replace <code>YOUR_FORM_ID</code> in the form's <code>action</code> attribute with your <a href="https://formspree.io" target="_blank">Formspree</a> endpoint to receive submissions by email. Delete this banner once live.
         </div>
@@ -605,7 +558,7 @@
                 <option>British Columbia</option>
                 <option>Manitoba</option>
                 <option>New Brunswick</option>
-                <option>Newfoundland &amp; Labrador</option>
+                <option>Newfoundland & Labrador</option>
                 <option>Nova Scotia</option>
                 <option>Ontario</option>
                 <option>Prince Edward Island</option>
@@ -622,9 +575,9 @@
             <select id="service" name="service">
               <option value="" disabled selected>Select…</option>
               <option>AI Solutions</option>
-              <option>IT &amp; Technology Consulting</option>
-              <option>Accounting &amp; Tax Services</option>
-              <option>Business Consulting &amp; Strategy</option>
+              <option>IT & Technology Consulting</option>
+              <option>Accounting & Tax Services</option>
+              <option>Business Consulting & Strategy</option>
               <option>Not sure yet</option>
             </select>
           </div>
@@ -654,15 +607,15 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="https://finitragroup.com/images/logo.svg" id="fin_logo">
+        <img src="https://finitragroup.com/images/logo.svg" id="top_logo"></img>
         <p>AI, IT, accounting, and business consulting services for businesses and individuals across Canada.</p>
       </div>
       <div class="footer-col">
         <h5>Services</h5>
         <ul class="footer-links">
           <li><a href="#services">AI Solutions</a></li>
-          <li><a href="#services">IT &amp; Technology</a></li>
-          <li><a href="#services">Accounting &amp; Tax</a></li>
+          <li><a href="#services">IT & Technology</a></li>
+          <li><a href="#services">Accounting & Tax</a></li>
           <li><a href="#services">Business Strategy</a></li>
         </ul>
       </div>
@@ -676,7 +629,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Finitra Group. All rights reserved. Canada.</p>
+      <p>© 2026 Finitra. All rights reserved. Canada.</p>
       <div class="footer-bottom-links">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Service</a>
@@ -686,28 +639,25 @@
 </footer>
 
 <script>
-  // Scroll reveal with stagger
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('in'); observer.unobserve(e.target); }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
   document.querySelectorAll('.reveal').forEach(el => {
     const siblings = Array.from(el.parentElement.querySelectorAll('.reveal'));
-    el.style.transitionDelay = (siblings.indexOf(el) * 90) + 'ms';
+    el.style.transitionDelay = (siblings.indexOf(el) * 100) + 'ms';
     observer.observe(el);
   });
 
-  // Smooth scroll with nav offset
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const target = document.querySelector(a.getAttribute('href'));
-      if (target) { e.preventDefault(); window.scrollTo({ top: target.offsetTop - 72, behavior: 'smooth' }); }
+      if (target) { e.preventDefault(); window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' }); }
     });
   });
 
-  // Formspree AJAX submission
   const form = document.getElementById('contactForm');
   const successPanel = document.getElementById('formSuccess');
   const submitBtn = document.getElementById('submitBtn');
